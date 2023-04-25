@@ -1,8 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyDfPbMjpK33XeB1gWpVEIP2kPmHBzXKm3k",
+    authDomain: "long-room.firebaseapp.com",
+    projectId: "long-room",
+    storageBucket: "long-room.appspot.com",
+    messagingSenderId: "557387739276",
+    appId: "1:557387739276:web:c961ab49c6868b1a9f0ba9"
+};
+
+export const firebase = initializeApp(firebaseConfig);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,7 +24,3 @@ root.render(
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
